@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom";
+import data from "../data/listings.json";
+import Header from "../components/Header";
+import Card from "../components/Card";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Page d’accueil</h1>
-      <p>Bienvenue sur Kasa !</p>
-      <Link to="/about">À propos</Link>;
-    </main>
+    <>
+      <Header />
+      <main className="container">
+        <h1 className="sr-only">Kasa — Annonces</h1>
+        <section className="grid">
+          {data.map((item) => (
+            <Link
+              to={`/logement/${item.id}`}
+              key={item.id}
+              className="card-link"
+            >
+              <Card title={item.title} cover={item.cover} />
+            </Link>
+          ))}
+        </section>
+      </main>
+    </>
   );
 }
