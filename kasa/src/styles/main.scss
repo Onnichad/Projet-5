@@ -1,5 +1,13 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f8f8f8;
-}
+@use "./abstracts/variables" as *;
+@use "./abstracts/mixins" as *;
+
+@use "./base/reset";
+@use "./base/globals";
+@use "./base/typography";
+
+@use "./layout/container";
+
+@use "./components/header";
+@use "./components/card";
+
+@use "./utilities/visually-hidden";

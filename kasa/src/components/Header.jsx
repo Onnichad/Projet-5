@@ -1,17 +1,29 @@
+// src/components/Header.jsx
 import { NavLink, Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header className="header">
-      <Link to="/" className="logo">
-        Kasa
-      </Link>
-      <nav className="nav">
-        <NavLink to="/" end>
-          Accueil
-        </NavLink>
-        <NavLink to="/about">À propos</NavLink>
-      </nav>
+      <div className="container header__inner">
+        <Link to="/" className="header__logo">
+          Kasa
+        </Link>
+        <nav className="header__nav">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) => (isActive ? "is-active" : "")}
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "is-active" : "")}
+          >
+            À propos
+          </NavLink>
+        </nav>
+      </div>
     </header>
   );
 }
