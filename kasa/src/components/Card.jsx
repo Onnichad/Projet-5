@@ -1,8 +1,12 @@
 export default function Card({ title, cover }) {
   return (
     <article className="card">
-      {cover && <img src={cover} alt={title} />}
-      <h3 className="card__title">{title}</h3>
+      <div className="card__media">
+        <img src={cover} alt={title} loading="lazy" />
+        <div className="card__overlay">
+          <h3 className="card__title">{title}</h3>
+        </div>
+      </div>
     </article>
   );
 }

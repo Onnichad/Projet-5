@@ -1,45 +1,76 @@
-@use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-
-  @include respond(md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include respond(lg) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  justify-content: center;
 }
 
 .card-link {
-  display: block;
+  flex: 1 1 100%;
+  max-width: 100%;
 }
 
 .card {
-  background: $color-white;
-  border-radius: $radius-xl;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  position: relative;
   overflow: hidden;
+  border-radius: $radius-xl;
+  background: $color-white;
   box-shadow: $shadow-card;
-  transition: transform 0.12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 
   &:hover {
     transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
   }
 
-  img {
+  &__media {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    @include respond(md) {
-      height: 200px;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
   }
 
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 0.9rem;
+  }
+
   &__title {
+    margin: 0;
+    color: $color-white;
     font-size: 1rem;
-    padding: 0.75rem 0.9rem 1rem;
+    line-height: 1.2;
+  }
+}
+
+@include respond(md) {
+  .card-link {
+    flex: 0 0 340px;
+    max-width: 340px;
+  }
+
+  .card {
+    width: 340px;
+    height: 340px;
+    aspect-ratio: auto;
   }
 }
