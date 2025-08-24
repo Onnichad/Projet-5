@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import data from "../data/listings.json";
 import Header from "../components/Header";
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           ))}
         </section>
       </main>
+      <Footer />
     </>
   );
 }

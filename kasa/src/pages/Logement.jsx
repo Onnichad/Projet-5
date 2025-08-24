@@ -5,6 +5,7 @@ import Carousel from "../components/Carousel";
 import Tag from "../components/Tag";
 import RatingStars from "../components/RatingStars";
 import Accordion from "../components/Accordion";
+import Footer from "../components/Footer";
 
 export default function Logement() {
   const { id } = useParams();
@@ -45,7 +46,7 @@ export default function Logement() {
         </div>
 
         <div className="logement__columns">
-          <Accordion title="Description" defaultOpen>
+          <Accordion title="Description">
             <p>{item.description}</p>
           </Accordion>
           <Accordion title="Équipements">
@@ -57,6 +58,7 @@ export default function Logement() {
           </Accordion>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

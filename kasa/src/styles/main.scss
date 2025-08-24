@@ -7,11 +7,15 @@
 
 @use "./layout/container";
 
+@use "./pages/about";
+@use "./pages/notfound";
+
 @use "./components/header";
 @use "./components/carousel";
 @use "./components/accordion";
 @use "./components/rating";
 @use "./components/tag";
 @use "./components/card";
+@use "./components/footer";
 
 @use "./utilities/visually-hidden";

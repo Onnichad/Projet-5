@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.about {
+  &__banner {
+    margin: 1rem 0 1.25rem;
+    width: 100%;
+    height: 160px;
+    border-radius: $radius-xl;
+    background: url("../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash\ 2.png")
+      center/cover no-repeat;
+    @include respond(md) {
+      height: 223px;
+    }
+  }
+  &__accordions {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    @include respond(md) {
+      gap: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  margin-top: 3rem;
+  background: #000;
+  color: #fff;
+
+  &__logofoot {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  &__inner {
+    padding: 2rem 1rem;
+    text-align: center;
+    display: grid;
+    gap: 0.5rem;
+  }
+  &__brand {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  &__copy {
+    opacity: 0.85;
+    font-size: 0.95rem;
+  }
+}

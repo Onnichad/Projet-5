@@ -1,12 +1,12 @@
-// src/components/Header.jsx
 import { NavLink, Link } from "react-router-dom";
+import logo from "../assets/LOGO.png";
 
 export default function Header() {
   return (
     <header className="header">
       <div className="container header__inner">
         <Link to="/" className="header__logo">
-          Kasa
+          <img src={logo} alt="Logo Kasa" />
         </Link>
         <nav className="header__nav">
           <NavLink

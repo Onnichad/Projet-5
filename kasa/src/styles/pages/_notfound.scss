@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+
+.notfound {
+  text-align: center;
+  padding: 2.5rem 0 3.5rem;
+
+  &__code {
+    font-size: clamp(96px, 22vw, 180px);
+    line-height: 1;
+    margin: 0 0 1rem;
+    color: $color-brand;
+    font-weight: 700;
+  }
+  &__text {
+    margin: 0 0 1.25rem;
+    color: $color-text;
+  }
+  &__link {
+    color: $color-brand;
+    text-decoration: underline;
+  }
+}
