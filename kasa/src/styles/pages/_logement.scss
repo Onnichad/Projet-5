@@ -1,0 +1,70 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.logement {
+  &__header {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    @include respond(md) {
+      grid-template-columns: 1fr auto;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.25rem;
+  }
+  &__location {
+    color: $color-muted;
+    margin-bottom: 0.5rem;
+  }
+  &__tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  &__meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    @include respond(md) {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+  }
+
+  &__columns {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    grid-template-columns: 1fr;
+    @include respond(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.host {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  &__name {
+    text-align: right;
+    max-width: 12ch;
+  }
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.equip {
+  margin: 0;
+  padding-left: 1.2rem;
+}

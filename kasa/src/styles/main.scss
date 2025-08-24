@@ -8,6 +8,10 @@
 @use "./layout/container";
 
 @use "./components/header";
+@use "./components/carousel";
+@use "./components/accordion";
+@use "./components/rating";
+@use "./components/tag";
 @use "./components/card";
 
 @use "./utilities/visually-hidden";
