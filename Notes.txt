@@ -1,4 +1,0 @@
-A voir avec Moustapha = ESLint ?
-
-
-detail = html 

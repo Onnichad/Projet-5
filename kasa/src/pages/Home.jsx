@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <Header />
       <main className="container">
-        <h1 className="sr-only">Kasa — Annonces</h1>
         <section className="grid">
           {data.map((item) => (
             <Link

@@ -1,16 +1,32 @@
-$color-bg: #f7f7f7;
-$color-text: #111;
-$color-muted: #666;
 $color-brand: #ff6060;
-$color-white: #fff;
+$color-text: #000000;
+$color-muted: #666666;
+$color-bg: #ffffff;
+$color-dark: #000000;
+$color-white: #ffffff;
 
 $radius-xl: 16px;
 $radius-lg: 12px;
+$shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
 
-$shadow-card: 0 6px 24px rgba(0, 0, 0, 0.06);
+$container-max: 1240px;
+$gutter: 20px;
 
-$container-max: 1100px;
+$font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+  sans-serif;
+$h1-size: 48px;
+$h1-weight: 700;
+$h2-size: 24px;
+$h2-weight: 700;
+$body-size: 16px;
+$body-line: 1.5;
 
 $bp-sm: 480px;
 $bp-md: 768px;
 $bp-lg: 1024px;
+$bp-xl: 1280px;
+
+$carousel-h-mobile: 255px;
+$carousel-h-desktop: 415px;
+
+$card-size-desktop: 340px;
