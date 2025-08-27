@@ -21,7 +21,7 @@ export default function Home() {
 
         <section className="home__gridwrap">
           <div className="home__grid">
-            {data.map((item) => (
+            {data.slice(0, 6).map((item) => (
               <Link
                 to={`/logement/${item.id}`}
                 key={item.id}
