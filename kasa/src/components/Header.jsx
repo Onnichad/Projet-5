@@ -5,9 +5,10 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header__inner">
-        <Link to="/" className="header__logo">
+        <div className="header__logo">
           <img src={logo} alt="Logo Kasa" />
-        </Link>
+        </div>
+
         <nav className="header__nav">
           <NavLink
             to="/"

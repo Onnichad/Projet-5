@@ -1,46 +1,54 @@
 import Header from "../components/Header";
-import Accordion from "../components/Accordion";
 import Footer from "../components/Footer";
-
-const SECTIONS = [
-  {
-    title: "Fiabilité",
-    content:
-      "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements et toutes les informations sont régulièrement vérifiées.",
-  },
-  {
-    title: "Respect",
-    content:
-      "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement irrespectueux entraînera une exclusion de la plateforme.",
-  },
-  {
-    title: "Service",
-    content:
-      "Nos équipes restent à votre écoute pour vous assurer une expérience agréable et réactive, avant, pendant, et après votre séjour.",
-  },
-  {
-    title: "Sécurité",
-    content:
-      "La sécurité est la priorité de Kasa. Nos hôtes s’engagent à respecter un protocole stricte et nos équipes restent disponibles 24/7.",
-  },
-];
+import Accordion from "../components/Accordion";
+import aboutBanner from "../assets/backgroundpropos.png";
 
 export default function About() {
   return (
     <>
       <Header />
-      <main className="container about">
+      <main className="container">
         <div
           className="about__banner"
+          style={{ backgroundImage: `url(${aboutBanner})` }}
           role="img"
-          aria-label="Paysage illustratif"
+          aria-label="Bannière de la page À propos"
         />
-        <section className="about__accordions">
-          {SECTIONS.map((s) => (
-            <Accordion key={s.title} title={s.title}>
-              <p>{s.content}</p>
-            </Accordion>
-          ))}
+
+        <section className="about__content">
+          <Accordion title="Fiabilité">
+            <p>
+              Les annonces postées sur Kasa garantissent une fiabilité totale.
+              Les photos sont conformes aux logements, et toutes les
+              informations sont régulièrement vérifiées par nos équipes.
+            </p>
+          </Accordion>
+          <Accordion title="Respect">
+            <p>
+              La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+              comportement discriminatoire ou de perturbation du voisinage
+              entraînera une exclusion de notre plateforme.
+            </p>
+          </Accordion>
+          <Accordion title="Service">
+            <p>
+              La qualité du service est au cœur de notre engagement chez Kasa.
+              Nous veillons à ce que chaque interaction, que ce soit avec nos
+              hôtes ou nos locataires, soit empreinte de respect et de
+              bienveillance.
+            </p>
+          </Accordion>
+          <Accordion title="Sécurité">
+            <p>
+              Content: La sécurité est la priorité de Kasa. Aussi bien pour nos
+              hôtes que pour les voyageurs, chaque logement correspond aux
+              critères de sécurité établis par nos services. En laissant une
+              note aussi bien à l'hôte qu'au locataire, cela permet à nos
+              équipes de vérifier que les standards sont bien respectés. Nous
+              organisons également des ateliers sur la sécurité domestique pour
+              nos hôtes.
+            </p>
+          </Accordion>
         </section>
       </main>
       <Footer />

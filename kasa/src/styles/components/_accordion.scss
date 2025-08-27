@@ -3,6 +3,7 @@
 .accordion {
   border-radius: $radius-lg;
   overflow: hidden;
+  background: #f6f6f6;
 
   &__header {
     width: 100%;
@@ -18,11 +19,31 @@
   }
 
   &__panel {
-    background: #f6f6f6;
+    height: 0;
+    overflow: hidden;
+    background: #fff;
+    transition: height 220ms ease;
+  }
+
+  &__inner {
     padding: 16px;
   }
 
   &__chevron {
-    opacity: 0.95;
+    display: inline-block;
+    transition: transform 200ms ease;
+  }
+
+  &.is-open .accordion__chevron {
+    transform: rotate(-180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion__panel {
+    transition: none;
+  }
+  .accordion__chevron {
+    transition: none;
   }
 }
