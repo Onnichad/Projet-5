@@ -1,4 +1,4 @@
-import logofooter from "../assets/logofooter.png";
+import logofooter from '../assets/logofooter.png';
 
 export default function Footer() {
   return (
@@ -7,9 +7,7 @@ export default function Footer() {
         <img src={logofooter} alt="Logo Kasa" />
       </div>
       <div className="container footer__inner">
-        <div className="footer__copy">
-          © {new Date().getFullYear()} Kasa. Tous droits réservés
-        </div>
+        <div className="footer__copy">© 2020 Kasa. Tous droits réservés</div>
       </div>
     </footer>
   );
