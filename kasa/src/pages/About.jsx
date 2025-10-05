@@ -1,7 +1,7 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Accordion from "../components/Accordion";
-import aboutBanner from "../assets/backgroundpropos.png";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Accordion from '../components/Accordion';
+import aboutBanner from '../assets/backgroundpropos.png';
 
 export default function About() {
   return (
