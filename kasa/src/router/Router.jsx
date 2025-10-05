@@ -6,14 +6,12 @@ import Error404 from '../pages/Error404';
 
 function AppRouter() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/logement/:id" element={<Logement />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/logement/:id" element={<Logement />} />
+      <Route path="*" element={<Error404 />} />
+    </Routes>
   );
 }
 
